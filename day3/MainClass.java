@@ -59,11 +59,88 @@ public class MainClass {
         System.out.println(Math.abs(pos1[0] - posInput[0]) + Math.abs(pos1[1] - posInput[1]));
         System.out.println("Part 2 of Day 3");
         
+        /*set up spiral*/
         int[][] B = new int[n][n];
+        
+        for(int i = 0; i < B.length; i++) {
+        	for(int j = 0; j < B[i].length; j++) {
+        		B[i][j] = 0;
+        	}
+        }
         
         B[n/2][n/2] = 1;
         
+        /*building spiral*/
+        String dir = "right";
+        int x = n/2;
+        int y = n/2;
+        boolean found = false;
+        int number = 0;
+        
+        while(!found) {
+        	switch(dir) {
+        	case "right":
+        		y++;
+        		
+        		number = getNumber(B, x, y);
+        		B[x][y] = number;
+        		
+        		if(number > input) {
+        			found = true;
+        			System.out.println(number);
+        		}
+        		
+        		if(B[x-1][y] == 0) {
+        			dir = "up";
+        		}
+        		break;
+        	case "up":
+        		x--;
+        		number = getNumber(B, x, y);
+        		B[x][y] = number;
+        		if(number > input) {
+        			found = true;
+        			System.out.println(number);
+        		}
+        		
+        		if(B[x][y-1] == 0) {
+        			dir = "left";
+        		}
+        		break;
+        	case "left":
+        		y--;
+        		number = getNumber(B, x, y);
+        		B[x][y] = number;
+        		if(number > input) {
+        			found = true;
+        			System.out.println(number);
+        		}
+        		
+        		if(B[x+1][y] == 0) {
+        			dir = "down";
+        		}
+        		break;
+        	case "down":
+        		x++;
+        		number = getNumber(B, x, y);
+        		B[x][y] = number;
+        		if(number > input) {
+        			found = true;
+        			System.out.println(number);
+        		}
+        		
+        		if(B[x][y+1] == 0) {
+        			dir = "right";
+        		}
+        		break;
+        	}
+        }
+        
         System.out.println("Program Ended");
 	}
-
+	
+	static int getNumber(int[][] Array, int x, int y) {
+		return Array[x][y] + Array[x-1][y] + Array[x+1][y] + Array[x][y+1] + Array[x][y-1] 
+				+ Array[x+1][y+1] + Array[x+1][y-1] + Array[x-1][y+1] + Array[x-1][y-1];
+	}
 }
