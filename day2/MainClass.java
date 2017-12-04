@@ -17,8 +17,8 @@ public class MainClass {
 		
 		System.out.println("Part 1 of Day 2");
 		
-		if(ir.GetInput("C:\\Users\\Henning\\eclipse-workspace\\AdventOfCode2017\\day2\\Day2_Input") != null) {
-			for(String s : ir.GetInput("C:\\Users\\Henning\\eclipse-workspace\\AdventOfCode2017\\day2\\Day2_Input")) {
+		if(ir.GetInput("./day2/Day2_Input") != null) {
+			for(String s : ir.GetInput("./day2/Day2_Input")) {
 				List<Integer> oneLine = splitLines(s);
 				
 				oneLine.sort(new Comparator<Integer>() {
@@ -43,8 +43,8 @@ public class MainClass {
 		System.out.println("Part 2 of Day 2");
 		
 		sum = 0;
-		if(ir.GetInput("C:\\Users\\Henning\\eclipse-workspace\\AdventOfCode2017\\day2\\Day2_Input") != null) {
-			for(String s : ir.GetInput("C:\\Users\\Henning\\eclipse-workspace\\AdventOfCode2017\\day2\\Day2_Input")) {
+		if(ir.GetInput("./day2/Day2_Input") != null) {
+			for(String s : ir.GetInput("./day2/Day2_Input")) {
 				List<Integer> oneLine = splitLines(s);
 				
 				for(int i = 0; i < oneLine.size(); i++) {

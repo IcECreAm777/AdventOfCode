@@ -12,7 +12,7 @@ public class MainClass {
 		System.out.println("Program started");
 
 		InputReader ir = new InputReader();
-		List<String> lines = ir.GetInput("C:\\Users\\Henning\\eclipse-workspace\\AdventOfCode2017\\day4\\Day4_Input");
+		List<String> lines = ir.GetInput("./day4/Day4_Input");
 		
 		System.out.println("Part 1 of Day 4");
 		
