@@ -6,6 +6,14 @@ import java.util.List;
 
 import allDays.InputReader;
 
+/**
+ * 
+ * @author Henning Gütschow
+ * substracts the lowest from the biggest number for each line and sums the results up.
+ * 
+ * Part 2 gets if 2 numbers can be devided for each line and sums the divide results up.
+ *
+ */
 public class MainClass {
 
 	public static void main(String[] args) {

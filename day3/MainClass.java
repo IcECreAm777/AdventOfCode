@@ -1,12 +1,24 @@
 package day3;
 
+import allDays.InputReader;
+
+/**
+ * 
+ * @author Henning Gütschow
+ * gets the taxicab steps from a point in a spiral array to the middle (1)
+ * 
+ * The program builds the spiral array. Afterwards it gets the position of 1 and the input number and then calculates the taxicab steps
+ * 
+ * Part 2 builds the spiral array but not simply increments the values. The values are the sum of the fields around them (empty fields = 0) and returns the first number which is bigger than the input number.
+ */
 public class MainClass {
 
 	public static void main(String[] args) {
 
 		System.out.println("Program started");
 		
-		int input = 347991;
+		InputReader ir = new InputReader();
+		int input = Integer.parseInt(ir.GetInput("./day3/day3_Input").get(0));
 		
 		System.out.println("Part 1 of Day 3");
 		

@@ -4,6 +4,16 @@ import java.util.List;
 
 import allDays.InputReader;
 
+/**
+ * 
+ * @author Henning Gütschow
+ * Tries to escape an array with the commands in it
+ * 
+ * The program gets the steps from the current index an increases the current index by the given steps. The steps on this position are incremented during the process.
+ * 
+ * Part 2 decrements the steps when the steps are 3 or more or else increments them.
+ * 
+ */
 public class MainClass {
 
 	public static void main(String[] args) {

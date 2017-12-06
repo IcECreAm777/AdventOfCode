@@ -5,6 +5,15 @@ import java.util.List;
 
 import allDays.InputReader;
 
+/**
+ * 
+ * @author Henning Gütschow
+ * checks the passphrases for validity (Each line = 1 passphrase)
+ * 
+ * the program gets the words of an passphrase and ckecks if the word occurs twice or more.
+ * 
+ * Part 2 includes the rearrangement of the words (sorted alphabetically)
+ */
 public class MainClass {
 
 	public static void main(String[] args) {

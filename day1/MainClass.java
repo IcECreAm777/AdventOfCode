@@ -1,5 +1,14 @@
 package day1;
 
+/**
+ * 
+ * @author Henning Gütschow
+ * sums up the numbers which are repeated.
+ * 
+ * The program gets numbers which are repeated (e.g. 99, not 919) and sums all up.
+ * 
+ * Part 2 checks if the numbers in the other half of the input are equals and adds the value to the result.
+ */
 public class MainClass {
 
 	public static void main(String[] args) {
