@@ -77,6 +77,10 @@ public class MainClass {
 		
 		CalculateWeight(root);
 		
+		for(String s : unbalanced) {
+			System.out.println(s + " " + weights.get(s));
+		}
+		
 		System.out.println("Program End");
 	}
 
