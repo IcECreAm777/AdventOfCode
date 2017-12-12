@@ -6,6 +6,16 @@ import java.util.Map;
 
 import allDays.InputReader;
 
+/**
+ * 
+ * @author Henning Gütschow
+ * Interpretes instructions from the input file
+ * 
+ * The program executes the instructions given in the file and prints the highest number after the executeion 
+ * 
+ * Part 2 prints the biggest number which ever existed during runtime
+ *
+ */
 public class MainClass {
 	
 	static Map<String, Integer> vars = new HashMap<String, Integer>();
